@@ -1,67 +1,36 @@
-const quiz = document.querySelector('#quiz')
-const slajder = document.querySelector('#slajder')
-const Images = ['./images/cannabis-social.2e16d0ba.fill-1200x1200.jpg', './images/duze-zblizenie-lemon-skunk-red-no-2-1024x768.jpg.webp', './images/Macro_cannabis_bud.jpg']
-const prevButton = document.querySelector('#prev-btn')
-const nextButton = document.querySelector('#next-btn')
+const quiz = document.querySelector('#quiz');
+const slajder = document.querySelector('#slajder');
+const Images = ['./images/cannabis-social.2e16d0ba.fill-1200x1200.jpg', './images/duze-zblizenie-lemon-skunk-red-no-2-1024x768.jpg.webp', './images/Macro_cannabis_bud.jpg'];
+const prevButton = document.querySelector('#prev-btn');
+const nextButton = document.querySelector('#next-btn');
 
+let currentIndex = 0;
 
+const showImage = (index) => {
+    slajder.innerHTML = ''; // Clear previous images
 
-// EventListenery
-
-nextButton.addEventListener('click', () => {})
-
-
-
-//Funkcje
-
-// const showSlajder = (image) => {
-//     for(image = 0; image < Images.length; image++) {
-//     const newImage = document.createElement('img')
-//     newImage.classList.add('slajdImage')
-//     // newImage.src = './images/cannabis-social.2e16d0ba.fill-1200x1200.jpg'
-//     newImage.src = Images[image]
-//     slajder.appendChild(newImage)
-//     console.log('Funkcja jest wywyoływana')
-//     }
-// }
-
-const showSlajder = () => {
-    let currentIndex = 0;
-
-    const changeImage = () => {
-        // Clear previous images
-        slajder.innerHTML = '';
-
-        // Create new image element
-        const newImage = document.createElement('img');
-        newImage.classList.add('slajdImage');
-        newImage.src = Images[currentIndex];
-        slajder.appendChild(newImage);
-
-        // Update index for next image
-        currentIndex = (currentIndex + 1) % Images.length; // Loop back to the first image
-    };
-
-    // Show the first image immediately
-    changeImage();
-
-    // Change image every 3 seconds (3000 milliseconds)
-    setInterval(changeImage, 5000);
+    const newImage = document.createElement('img');
+    newImage.classList.add('slajdImage');
+    newImage.src = Images[index];
+    slajder.appendChild(newImage);
 };
 
-// Funkcja do przełączania slajdów
-const showNextSlide = () => {
-    slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].classList.add('active');
+const showNextImage = () => {
+    currentIndex = (currentIndex + 1) % Images.length; // Loop back to the first image
+    showImage(currentIndex);
 };
 
-// Funkcja do przełączania na poprzedni slajd
-const showPrevSlide = () => {
-    slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    slides[currentIndex].classList.add('active');
+const showPrevImage = () => {
+    currentIndex = (currentIndex - 1 + Images.length) % Images.length; // Loop to the last image if at the beginning
+    showImage(currentIndex);
 };
 
-showSlajder(Images[0])
+// Event listeners for buttons
+nextButton.addEventListener('click', showNextImage);
+prevButton.addEventListener('click', showPrevImage);
 
+// Show the first image immediately
+showImage(currentIndex);
+
+// Auto-change image every 5 seconds
+setInterval(showNextImage, 5000);

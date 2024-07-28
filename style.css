@@ -5,7 +5,6 @@ body {
 }
 
 nav {
-    
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -49,24 +48,6 @@ nav {
     border-right: 2px solid black;
 }
 
-/* .new-slide {
-    color: blue;
-    font-size: 20px;
-    list-style-type: none;
-    background-color: yellow;
-}
-
-
-.new-slide {
-    list-style-type: none;
-    margin: 10px;
-}
-
-.new-slide img {
-    max-width: 100%;
-    height: auto;
-} */
-
 #slajder {
     text-align: center;
     margin-top: 20px;
@@ -77,3 +58,13 @@ nav {
     height: 500px;
 }
 
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container button {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
