@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zioła dookoła</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <h1 id="navigation-header">Zioła dookoła</h1>
 
         <ul id="navigation">
-            <li id="quiz" class="nav-btn"><a href="./HTML Elements/quiz.html">Quiz</a></li>
+            <li id="quiz" class="nav-btn"><a href="./quiz.html">Quiz</a></li>
             <li id="ziolopedia" class="nav-btn"><a href="./ziolopedia.html">Ziołopedia</a></li>
             <li id="mapa" class="nav-btn"><a href="./mapaziol.html">Mapa ziół</a></li>
             <li id="przepisy" class="nav-btn"><a href="./przepisy.html">Przepisy</a></li>
@@ -19,5 +20,189 @@
             <li id="last-item" class="nav-btn"><a href="./polecanesklepy.html">Polecane sklepy z ziołami</a></li>
         </ul>
     </nav>
+    <section id="pytania">
+        <div id="pytanie">
+            <h1 id="pytanie-header">Quiz o Zielarstwie</h1>
+        </div>
+    </section>
+    <!-- <section id="pytania">
+        <div id="pytanie">
+            <h1 id="pytanie-header"></h1>
+            <p id="pytanie-tekst"></p>
+            
+        </div>
+        <input type="text" name="" id="pytanie-input" placeholder="Czy piszczy panu w uszach">
+    </section> -->
+
+    <!-- <section id="pytania">
+        <div id="pytanie">
+            <h1 id="pytanie-header">Quiz o Zielarstwie</h1>
+    
+            <div class="pytanie">
+                <p>1. Co to jest fitoterapia?</p>
+                <input type="radio" name="q1" value="A"> A. Terapia z wykorzystaniem owoców<br>
+                <input type="radio" name="q1" value="B"> B. Leczenie przy użyciu roślin i ziół<br>
+                <input type="radio" name="q1" value="C"> C. Terapia z wykorzystaniem wody<br>
+                <input type="radio" name="q1" value="D"> D. Terapia z użyciem minerałów<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>2. Jakie zioło jest najczęściej używane do leczenia problemów trawiennych?</p>
+                <input type="radio" name="q2" value="A"> A. Melisa<br>
+                <input type="radio" name="q2" value="B"> B. Mięta pieprzowa<br>
+                <input type="radio" name="q2" value="C"> C. Rumianek<br>
+                <input type="radio" name="q2" value="D"> D. Lawenda<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>3. Które zioło jest znane ze swoich właściwości uspokajających?</p>
+                <input type="radio" name="q3" value="A"> A. Echinacea<br>
+                <input type="radio" name="q3" value="B"> B. Kawa<br>
+                <input type="radio" name="q3" value="C"> C. Melisa<br>
+                <input type="radio" name="q3" value="D"> D. Imbir<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>4. Które zioło jest często używane do wspomagania układu odpornościowego?</p>
+                <input type="radio" name="q4" value="A"> A. Szałwia<br>
+                <input type="radio" name="q4" value="B"> B. Echinacea<br>
+                <input type="radio" name="q4" value="C"> C. Tymianek<br>
+                <input type="radio" name="q4" value="D"> D. Mięta<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>5. Jakie zioło jest znane ze swoich właściwości przeciwbakteryjnych i przeciwgrzybiczych?</p>
+                <input type="radio" name="q5" value="A"> A. Aloes<br>
+                <input type="radio" name="q5" value="B"> B. Kurkuma<br>
+                <input type="radio" name="q5" value="C"> C. Czosnek<br>
+                <input type="radio" name="q5" value="D"> D. Bazylia<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>6. Która z roślin jest znana jako naturalny środek na ból głowy?</p>
+                <input type="radio" name="q6" value="A"> A. Rozmaryn<br>
+                <input type="radio" name="q6" value="B"> B. Lawenda<br>
+                <input type="radio" name="q6" value="C"> C. Mięta pieprzowa<br>
+                <input type="radio" name="q6" value="D"> D. Szałwia<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>7. Jakie zioło jest powszechnie stosowane w leczeniu przeziębień i grypy?</p>
+                <input type="radio" name="q7" value="A"> A. Mięta<br>
+                <input type="radio" name="q7" value="B"> B. Echinacea<br>
+                <input type="radio" name="q7" value="C"> C. Bazylia<br>
+                <input type="radio" name="q7" value="D"> D. Melisa<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>8. Które zioło jest używane do łagodzenia stresu i poprawy snu?</p>
+                <input type="radio" name="q8" value="A"> A. Lawenda<br>
+                <input type="radio" name="q8" value="B"> B. Mięta pieprzowa<br>
+                <input type="radio" name="q8" value="C"> C. Tymianek<br>
+                <input type="radio" name="q8" value="D"> D. Szałwia<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>9. Która roślina jest znana z właściwości przeciwzapalnych?</p>
+                <input type="radio" name="q9" value="A"> A. Rumianek<br>
+                <input type="radio" name="q9" value="B"> B. Kurkuma<br>
+                <input type="radio" name="q9" value="C"> C. Eukaliptus<br>
+                <input type="radio" name="q9" value="D"> D. Mięta<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>10. Która z roślin jest często używana do wspomagania trawienia?</p>
+                <input type="radio" name="q10" value="A"> A. Aloes<br>
+                <input type="radio" name="q10" value="B"> B. Imbir<br>
+                <input type="radio" name="q10" value="C"> C. Lawenda<br>
+                <input type="radio" name="q10" value="D"> D. Rumianek<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>11. Co to jest macerat olejowy?</p>
+                <input type="radio" name="q11" value="A"> A. Olej z pierwszego tłoczenia<br>
+                <input type="radio" name="q11" value="B"> B. Ekstrakt z roślin rozpuszczony w alkoholu<br>
+                <input type="radio" name="q11" value="C"> C. Zioła namoczone w oleju w celu wyciągnięcia składników aktywnych<br>
+                <input type="radio" name="q11" value="D"> D. Roztwór wodny z ziół<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>12. Jakie zioło jest stosowane w leczeniu problemów skórnych, takich jak trądzik?</p>
+                <input type="radio" name="q12" value="A"> A. Mięta<br>
+                <input type="radio" name="q12" value="B"> B. Aloes<br>
+                <input type="radio" name="q12" value="C"> C. Rumianek<br>
+                <input type="radio" name="q12" value="D"> D. Nagietek<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>13. Która roślina jest znana ze swoich właściwości przeciwutleniających?</p>
+                <input type="radio" name="q13" value="A"> A. Mięta pieprzowa<br>
+                <input type="radio" name="q13" value="B"> B. Echinacea<br>
+                <input type="radio" name="q13" value="C"> C. Zielona herbata<br>
+                <input type="radio" name="q13" value="D"> D. Lawenda<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>14. Jakie zioło jest znane jako naturalny środek na problemy z wątrobą?</p>
+                <input type="radio" name="q14" value="A"> A. Mniszek lekarski<br>
+                <input type="radio" name="q14" value="B"> B. Rumianek<br>
+                <input type="radio" name="q14" value="C"> C. Tymianek<br>
+                <input type="radio" name="q14" value="D"> D. Mięta<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>15. Która roślina jest często stosowana do poprawy krążenia krwi?</p>
+                <input type="radio" name="q15" value="A"> A. Imbir<br>
+                <input type="radio" name="q15" value="B"> B. Rozmaryn<br>
+                <input type="radio" name="q15" value="C"> C. Szałwia<br>
+                <input type="radio" name="q15" value="D"> D. Lawenda<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>16. Jak należy przygotować napar z mięty pieprzowej?</p>
+                <input type="radio" name="q16" value="A"> A. Zagotować wodę i dodać świeże lub suszone liście mięty, parzyć przez 10 minut<br>
+                <input type="radio" name="q16" value="B"> B. Zagotować wodę i dodać nasiona mięty, parzyć przez 5 minut<br>
+                <input type="radio" name="q16" value="C"> C. Zalać zimną wodą i odstawić na 24 godziny<br>
+                <input type="radio" name="q16" value="D"> D. Mieszać z sokiem z cytryny i pić na zimno<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>17. Jakie zioło można dodać do kąpieli w celu relaksacji i złagodzenia napięcia mięśni?</p>
+                <input type="radio" name="q17" value="A"> A. Lawenda<br>
+                <input type="radio" name="q17" value="B"> B. Kurkuma<br>
+                <input type="radio" name="q17" value="C"> C. Echinacea<br>
+                <input type="radio" name="q17" value="D"> D. Tymianek<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>18. Które zioło jest popularne w kuchni śródziemnomorskiej i ma również właściwości lecznicze?</p>
+                <input type="radio" name="q18" value="A"> A. Rozmaryn<br>
+                <input type="radio" name="q18" value="B"> B. Rumianek<br>
+                <input type="radio" name="q18" value="C"> C. Melisa<br>
+                <input type="radio" name="q18" value="D"> D. Aloes<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>19. Jakie są główne zastosowania rumianku w medycynie naturalnej?</p>
+                <input type="radio" name="q19" value="A"> A. Leczenie bólu głowy i poprawa pamięci<br>
+                <input type="radio" name="q19" value="B"> B. Łagodzenie stanów zapalnych i wspomaganie trawienia<br>
+                <input type="radio" name="q19" value="C"> C. Poprawa krążenia i wzmacnianie kości<br>
+                <input type="radio" name="q19" value="D"> D. Leczenie chorób układu oddechowego i zwiększanie energii<br>
+            </div>
+    
+            <div class="pytanie">
+                <p>20. Jakie zioło jest często używane w formie olejku eterycznego do aromaterapii?</p>
+                <input type="radio" name="q20" value="A"> A. Szałwia<br>
+                <input type="radio" name="q20" value="B"> B. Mięta pieprzowa<br>
+                <input type="radio" name="q20" value="C"> C. Lawenda<br>
+                <input type="radio" name="q20" value="D"> D. Echinacea<br>
+            </div>
+    
+            <input type="submit" value="Sprawdź odpowiedzi">
+        </div>
+    </section> -->
+    
+    <script src="quiz.js"></script>
+    
 </body>
 </html>
