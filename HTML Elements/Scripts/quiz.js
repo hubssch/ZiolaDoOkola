@@ -202,7 +202,7 @@ const quizQuestions = [
 ];
 
 function createQuiz() {
-    const quizContainer = document.getElementById('pytanie');
+    const quizContainer = document.getElementById('pytania');
 
     quizQuestions.forEach((q, index) => {
         const questionDiv = document.createElement('div');
