@@ -1,0 +1,40 @@
+#kalendarz {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#dni-tygodnia {
+    display: flex;
+    /* margin: 10px; */
+    justify-content: center;
+}
+
+.dzien-tygodnia {
+    margin: 0 10px 0 10px;
+    font-size: 22px;
+    border: 2px solid ;
+    border-radius: 6px;
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    /* box-shadow: 5px 5px 5px 5px darkgreen; */
+    box-shadow: inset 0 0 10px #000000;
+}
+
+#dni-miesiaca {
+    display: flex;
+    justify-content: center;
+}
+
+.dzien-miesiaca {
+    margin: 20px 25px 0 25px;
+    font-size: 22px;
+    border: 2px solid ;
+    border-radius: 6px;
+    width: 50px;
+    /* padding: 10px; */
+    text-align: center;
+    /* box-shadow: 5px 5px 5px 5px darkgreen; */
+    box-shadow: inset 0 0 5px #000000;
+}

@@ -17,12 +17,14 @@
     width: 600px;
     /* padding-top: 0px; */
     margin-top: 5px;
+    margin-left: 20px;
 }
 
 .ziolo-nazwa {
     padding-bottom: 0px;
     font-size: large;
     font-weight: bold;
+    margin-left: 20px;
 }
 
 .ziolo-wlasciwosci {
@@ -91,6 +93,7 @@ Individual image styling
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 10px;
+    margin-left: 20px;
 }
 
 /* Individual image styling */
