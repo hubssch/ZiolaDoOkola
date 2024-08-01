@@ -230,23 +230,45 @@ function createQuiz() {
     const submitButton = document.createElement('input');
     submitButton.type = 'submit';
     submitButton.value = 'Sprawdź odpowiedzi';
-    submitButton.onclick = checkAnswers;
+    submitButton.onclick = (e) => {
+        e.preventDefault();
+        checkAnswers();
+    };
     quizContainer.appendChild(submitButton);
 }
 
 function checkAnswers() {
+    let score = 0;
+    const totalQuestions = quizQuestions.length;
+
     quizQuestions.forEach((q, index) => {
         const selected = document.querySelector(`input[name="q${index + 1}"]:checked`);
-        if (selected) {
-            if (selected.value === q.correct) {
-                alert(`Pytanie ${index + 1}: Poprawna odpowiedź!`);
-            } else {
-                alert(`Pytanie ${index + 1}: Niepoprawna odpowiedź. Poprawna odpowiedź to ${q.correct}.`);
-            }
-        } else {
-            alert(`Pytanie ${index + 1}: Nie zaznaczono odpowiedzi.`);
+        if (selected && selected.value === q.correct) {
+            score++;
         }
     });
+
+    const percentage = (score / totalQuestions) * 100;
+    let comment = "";
+
+    if (percentage === 100) {
+        comment = "Gratulacje, jesteś już zaawansowanym zielarzem!";
+    } else if (percentage >= 80) {
+        comment = "Nieźle, wiesz już całkiem sporo.";
+    } else if (percentage >= 60) {
+        comment = "Dobra robota, chcesz dowiedzieć się więcej?";
+    } else if (percentage >= 30) {
+        comment = "Super, przed Tobą magiczna ziołowa przygoda.";
+    } else {
+        comment = "Nie martw się, każda przygoda zaczyna się od pierwszego kroku.";
+    }
+
+    document.getElementById('quiz-container').classList.add('hidden');
+    const resultContainer = document.getElementById('result-container');
+    resultContainer.classList.remove('hidden');
+    
+    document.getElementById('result').textContent = `Twój wynik: ${score} na ${totalQuestions} poprawnych odpowiedzi (${percentage}%).`;
+    document.getElementById('comment').textContent = comment;
 }
 
 window.onload = createQuiz;

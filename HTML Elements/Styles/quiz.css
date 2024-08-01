@@ -10,10 +10,12 @@
 .pytanie {
     display: block;
     border: 3px solid darkgreen;
+    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     padding-left: 10px;
+    padding-bottom: 10px;
     paint-order: right;
     /* justify-content: center; */
     /* background-color: rgb(0, 172, 0); */
@@ -38,3 +40,6 @@
     width: 100%;
 }
 
+.hidden {
+    display: none;
+}
