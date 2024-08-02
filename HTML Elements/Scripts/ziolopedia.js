@@ -32,6 +32,6 @@ function displayPhotos(photoArray) {
     });
 }
 
-displayPhotos(zdjecia)
+displayPhotos(zdjecia)  
 
 console.log(zdjecia.length)
