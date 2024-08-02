@@ -65,3 +65,5 @@ divKontakt.appendChild(pNumerTelefonu)
 console.log(divNazwaSklepu)
 
 console.log('script jest podpiety')
+
+//edit
