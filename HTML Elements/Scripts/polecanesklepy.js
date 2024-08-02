@@ -15,17 +15,22 @@ const sklep = {
 
 const divListaSklepow = document.getElementById('lista-sklepow')
 const divNazwaSklepu = document.createElement('div')
+const divLogaSklepow = document.createElement('div')
+const divOpisSklepow = document.createElement('div')
 const divLogoSklepu = document.createElement('img')
 const divLokalizacja = document.createElement('ul')
-const pMiasto = document.createElement('p')
-const pUlica = document.createElement('p')
-const divKontakt = document.createElement('div')
-const pEmail = document.createElement('p')
-const pNumerTelefonu = document.createElement('p')
+const pMiasto = document.createElement('li')
+const pUlica = document.createElement('li')
+const divKontakt = document.createElement('ul')
+const pEmail = document.createElement('li')
+const pNumerTelefonu = document.createElement('li')
 
 
 divNazwaSklepu.className = 'nazwa-sklepu'
+divLogaSklepow.className = 'loga-sklepow'
 divLogoSklepu.className = 'logo-sklepu'
+divOpisSklepow.className = 'opis-sklepow'
+divLokalizacja.className = 'lokalizacja'
 pMiasto.className = 'miasto'
 pUlica.classList - 'ulica'
 divKontakt.className = 'kontakt'
@@ -44,12 +49,16 @@ pNumerTelefonu.textContent = sklep.kontakt.numerTelefonu
 
 
 
-divListaSklepow.appendChild(divLogoSklepu)
-divListaSklepow.appendChild(divNazwaSklepu);
-divListaSklepow.appendChild(divLokalizacja)
+// divListaSklepow.appendChild(divLogoSklepu)
+
+divListaSklepow.appendChild(divLogaSklepow)
+divLogaSklepow.appendChild(divLogoSklepu)
+divListaSklepow.appendChild(divOpisSklepow)
+divOpisSklepow.appendChild(divNazwaSklepu);
+divOpisSklepow.appendChild(divLokalizacja)
 divLokalizacja.appendChild(pMiasto)
 divLokalizacja.appendChild(pUlica)
-divListaSklepow.appendChild(divKontakt)
+divOpisSklepow.appendChild(divKontakt)
 divKontakt.appendChild(pEmail)
 divKontakt.appendChild(pNumerTelefonu)
 

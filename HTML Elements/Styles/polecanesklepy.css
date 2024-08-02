@@ -6,13 +6,21 @@
 
 } */
 
+.loga-sklepow {
+    display: block;
+}
+
 #lista-sklepow {
     display: flex;
 }
 
-.nazwa-sklepu {
-    font-size: large;
+.opis-sklepow {
+    /* display: block; */
     margin: 30px 0px 0 70px;
+}
+
+.nazwa-sklepu {
+    font-size: large;    
 }
 
 .logo-sklepu {
