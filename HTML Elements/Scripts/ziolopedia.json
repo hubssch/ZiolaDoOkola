@@ -1,0 +1,20 @@
+{
+    "ziola": {
+      "mietaPieprzowa": {
+        "nazwa": "Mięta pieprzowa",
+        "opis": "bardzo dobrej jakości klasyczna i popularna odmiana mięty. Posiada intensywny aromat i smak, który nie sposób określić inaczej niż po prostu miętowy. Mięta jest jedną z najpopularniejszych roślin w ziołolecznictwie i medycynie naturalnej. Przede wszystkim znane są jej pozytywne właściwości w walce z problemami gastrycznymi. Herbatka miętowa wspomaga pracę jelit, wzmaga wydzielanie soku żołądkowego i pomaga na wzdęcia.",
+        "wlasciwosci": [
+          "Łagodzenie dolegliwości żołądkowych",
+          "Właściwości żółciopędne",
+          "Działanie antybakteryjne i przeciwwirusowe",
+          "Właściwości uspokajające"
+        ],
+        "zdjecia": [
+          {"src": "../images/mietapieprzowa/mieta-pieprzowa.jpg", "alt": "Zdjecie 1"},
+          {"src": "../images/mietapieprzowa/Mięta-Pieprzowa-Mentha-Piperita-3.jpg", "alt": "Zdjecie 2"},
+          {"src": "../images/mietapieprzowa/pol_pl_Mieta-pieprzowa-Mentha-piperita-8245_3.jpg", "alt": "Zdjecie 3"}
+        ]
+      }
+    }
+  }
+  
