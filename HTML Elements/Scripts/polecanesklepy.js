@@ -17,7 +17,8 @@ const divListaSklepow = document.getElementById('lista-sklepow')
 const divNazwaSklepu = document.createElement('div')
 const divLogaSklepow = document.createElement('div')
 const divOpisSklepow = document.createElement('div')
-const divLogoSklepu = document.createElement('img')
+const divLogoSklepu = document.createElement('div')
+const divLogoSklepuImg = document.createElement('img')
 const divLokalizacja = document.createElement('ul')
 const pMiasto = document.createElement('li')
 const pUlica = document.createElement('li')
@@ -29,6 +30,7 @@ const pNumerTelefonu = document.createElement('li')
 divNazwaSklepu.className = 'nazwa-sklepu'
 divLogaSklepow.className = 'loga-sklepow'
 divLogoSklepu.className = 'logo-sklepu'
+divLogoSklepuImg.className = 'logo-sklepu-img'
 divOpisSklepow.className = 'opis-sklepow'
 divLokalizacja.className = 'lokalizacja'
 pMiasto.className = 'miasto'
@@ -38,8 +40,8 @@ pEmail.classList = 'email'
 pNumerTelefonu.classList = 'numer-telefonu'
 
 divNazwaSklepu.textContent = sklep.nazwaSklepu
-divLogoSklepu.src = sklep.logo2.src
-divLogoSklepu.alt = sklep.logo.alt
+divLogoSklepuImg.src = sklep.logo2.src
+divLogoSklepuImg.alt = sklep.logo.alt
 divLokalizacja.textContent = 'Adres: '
 pMiasto.textContent = sklep.lokalizacja.miasto
 pUlica.textContent = sklep.lokalizacja.ulica
@@ -53,6 +55,7 @@ pNumerTelefonu.textContent = sklep.kontakt.numerTelefonu
 
 divListaSklepow.appendChild(divLogaSklepow)
 divLogaSklepow.appendChild(divLogoSklepu)
+divLogoSklepu.appendChild(divLogoSklepuImg)
 divListaSklepow.appendChild(divOpisSklepow)
 divOpisSklepow.appendChild(divNazwaSklepu);
 divOpisSklepow.appendChild(divLokalizacja)

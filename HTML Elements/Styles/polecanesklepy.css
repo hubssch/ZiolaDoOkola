@@ -25,7 +25,19 @@
 
 .logo-sklepu {
     border: 1px solid green;
+    width: 200px;
+    height: 200px;
+    margin: 30px 0px 0 70px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;    
+    display: flex; /* Ustawienie kontenera jako flex */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+}
+
+.logo-sklepu-img {
     width: 150px;
     height: 150px;
-    margin: 30px 0px 0 70px;
 }
+
