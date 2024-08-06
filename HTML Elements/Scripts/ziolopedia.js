@@ -1,67 +1,61 @@
-    // const { initializeApp } = await import('https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js');
-    // const { getDatabase, ref, get } = await import('https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js');
-    import { initializeApp } from "firebase/app";
-    import { getDatabase, ref, get } from "firebase/database";
+import { db, ref, get } from './firebase.js';
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyDDPSSEaa_FfYE0l_5Tx9OTg0Kt6XUfZ9I",
-        authDomain: "zioladookola-6e34c.firebaseapp.com",
-        databaseURL: "https://zioladookola-6e34c-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "zioladookola-6e34c",
-        storageBucket: "zioladookola-6e34c.appspot.com",
-        messagingSenderId: "597086045944",
-        appId: "1:597086045944:web:30b746b0c70da21f0ddd0d"
-    };
+document.addEventListener('DOMContentLoaded', () => {
+  const dataRef = ref(db, 'ziola/mietaPieprzowa');
+  get(dataRef)
+    .then(snapshot => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        displayData(data);
+      } else {
+        console.log('No data available');
+      }
+    })
+    .catch(error => {
+      console.error('Error getting data:', error);
+    });
+});
 
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
+function displayData(data) {
+  const nameElement = document.querySelector('.ziolo-nazwa');
+  const descriptionElement = document.querySelector('.ziolo-opis');
+  const mainImageElement = document.querySelector('.ziolo-image');
+  const galleryElement = document.querySelector('#galeria-zdjec');
+  const propertiesElement = document.querySelector('.ziolo-wlasciwosci');
 
-    function fetchZiolaData() {
-        const ziolaRef = ref(db, 'ziola/mietaPieprzowa');
-        get(ziolaRef).then((snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                displayZiolaData(data);
-            } else {
-                console.log("No data available");
-            }
-        }).catch((error) => {
-            console.error(error);
-        });
-    }
+  // Wyświetlenie nazwy
+  const name = document.createElement('h1');
+  name.textContent = data.nazwa;
+  nameElement.appendChild(name);
 
-    function displayZiolaData(data) {
-        document.querySelector('.ziolo-nazwa').textContent = data.nazwa;
-        document.querySelector('.ziolo-opis').textContent = data.opis;
+  // Wyświetlenie opisu
+  descriptionElement.textContent = data.opis;
 
-        const propertiesContainer = document.querySelector('.ziolo-wlasciwosci');
-        propertiesContainer.innerHTML = '<h2>Mięta pieprzowa - właściwości i działanie mięty</h2>';
+  // Wyświetlenie głównego zdjęcia
+  mainImageElement.src = data.glowneZdjecie.src;
+  mainImageElement.alt = data.glowneZdjecie.alt;
 
-        data.wlasciwosci.forEach(wlasciwosc => {
-            const h3 = document.createElement('h3');
-            h3.textContent = wlasciwosc.split(":")[0];
-            const p = document.createElement('p');
-            p.textContent = wlasciwosc.split(":")[1];
-            propertiesContainer.appendChild(h3);
-            propertiesContainer.appendChild(p);
-        });
+  // Wyświetlenie właściwości
+  const propertiesList = document.createElement('ul');
+  data.wlasciwosci.forEach(property => {
+    const propertyItem = document.createElement('li');
+    const propertyTitle = document.createElement('h3');
+    const propertyDescription = document.createElement('p');
+    
+    propertyTitle.textContent = property.nazwa;
+    propertyDescription.textContent = property.opis;
+    
+    propertyItem.appendChild(propertyTitle);
+    propertyItem.appendChild(propertyDescription);
+    propertiesList.appendChild(propertyItem);
+  });
+  propertiesElement.appendChild(propertiesList);
 
-        displayPhotos(data.zdjecia);
-    }
-
-    function displayPhotos(photoArray) {
-        const gallery = document.getElementById('galeria-zdjec');
-        gallery.innerHTML = '';
-
-        photoArray.forEach(zdjecie => {
-            const img = document.createElement('img');
-            img.src = zdjecie.src;
-            img.alt = zdjecie.alt;
-            img.className = 'miniatura';
-
-            gallery.appendChild(img);
-        });
-    }
-
-    fetchZiolaData();
-
+  // Wyświetlenie dodatkowych zdjęć
+  data.zdjecia.forEach(photo => {
+    const photoElement = document.createElement('img');
+    photoElement.src = photo.src;
+    photoElement.alt = photo.alt;
+    galleryElement.appendChild(photoElement);
+  });
+}

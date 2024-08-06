@@ -1,20 +1,44 @@
 {
-    "ziola": {
-      "mietaPieprzowa": {
-        "nazwa": "Mięta pieprzowa",
-        "opis": "bardzo dobrej jakości klasyczna i popularna odmiana mięty. Posiada intensywny aromat i smak, który nie sposób określić inaczej niż po prostu miętowy. Mięta jest jedną z najpopularniejszych roślin w ziołolecznictwie i medycynie naturalnej. Przede wszystkim znane są jej pozytywne właściwości w walce z problemami gastrycznymi. Herbatka miętowa wspomaga pracę jelit, wzmaga wydzielanie soku żołądkowego i pomaga na wzdęcia.",
-        "wlasciwosci": [
-          "Łagodzenie dolegliwości żołądkowych",
-          "Właściwości żółciopędne",
-          "Działanie antybakteryjne i przeciwwirusowe",
-          "Właściwości uspokajające"
-        ],
-        "zdjecia": [
-          {"src": "../images/mietapieprzowa/mieta-pieprzowa.jpg", "alt": "Zdjecie 1"},
-          {"src": "../images/mietapieprzowa/Mięta-Pieprzowa-Mentha-Piperita-3.jpg", "alt": "Zdjecie 2"},
-          {"src": "../images/mietapieprzowa/pol_pl_Mieta-pieprzowa-Mentha-piperita-8245_3.jpg", "alt": "Zdjecie 3"}
-        ]
-      }
+  "ziola": {
+    "mietaPieprzowa": {
+      "nazwa": "Mięta pieprzowa",
+      "opis": "bardzo dobrej jakości klasyczna i popularna odmiana mięty. Posiada intensywny aromat i smak, który nie sposób określić inaczej niż po prostu miętowy. Mięta jest jedną z najpopularniejszych roślin w ziołolecznictwie i medycynie naturalnej. Przede wszystkim znane są jej pozytywne właściwości w walce z problemami gastrycznymi. Herbatka miętowa wspomaga pracę jelit, wzmaga wydzielanie soku żołądkowego i pomaga na wzdęcia.",
+      "glowneZdjecie": {
+        "src": "../images/mieta-pieprzowa.jpeg",
+        "alt": "Mięta pieprzowa"
+      },
+      "wlasciwosci": [
+        {
+          "nazwa": "Łagodzenie dolegliwości żołądkowych",
+          "opis": "Mięta pieprzowa jest stosowana wspomagająco w leczeniu dyspepsji (niestrawności). Działa rozkurczowo na mięśnie gładkie przewodu pokarmowego, dzięki czemu łagodzi bóle brzucha, wzdęcia i niestrawność. Pobudza również wydzielanie soku żołądkowego, co może poprawić trawienie."
+        },
+        {
+          "nazwa": "Właściwości żółciopędne",
+          "opis": "Mięta pieprzowa pobudza wydzielanie żółci i soków żołądkowych, co może pomóc w trawieniu tłuszczów. Jednak, z tego względu, osoby cierpiące na refluks żołądkowy powinny unikać spożywania mięty."
+        },
+        {
+          "nazwa": "Działanie antybakteryjne i przeciwwirusowe",
+          "opis": "Badania wykazały, że Mięta pieprzowa wykazuje działanie przeciwbakteryjne wobec wielu szczepów bakterii, w tym bakterii Helicobacter pylori, które są odpowiedzialne za rozwój wrzodów żołądka i dwunastnicy. Mięta pieprzowa wykazuje także działanie przeciwwirusowe wobec niektórych wirusów, w tym wirusa grypy i wirusa RSV."
+        },
+        {
+          "nazwa": "Właściwości uspokajające",
+          "opis": "Mięta pieprzowa działa uspokajająco i relaksująco. Może być pomocna w łagodzeniu stresu i napięcia nerwowego."
+        }
+      ],
+      "zdjecia": [
+        {
+          "src": "../images/mietapieprzowa/mieta-pieprzowa.jpg",
+          "alt": "Zdjecie 1"
+        },
+        {
+          "src": "../images/mietapieprzowa/Mięta-Pieprzowa-Mentha-Piperita-3.jpg",
+          "alt": "Zdjecie 2"
+        },
+        {
+          "src": "../images/mietapieprzowa/pol_pl_Mieta-pieprzowa-Mentha-piperita-8245_3.jpg",
+          "alt": "Zdjecie 3"
+        }
+      ]
     }
   }
-  
+}
