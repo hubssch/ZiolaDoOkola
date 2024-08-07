@@ -56,6 +56,7 @@ function displayData(data) {
     const photoElement = document.createElement('img');
     photoElement.src = photo.src;
     photoElement.alt = photo.alt;
+    photoElement.className = 'miniatura'
     galleryElement.appendChild(photoElement);
   });
 }

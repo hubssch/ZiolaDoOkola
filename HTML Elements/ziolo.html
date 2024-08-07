@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zioła dookoła</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./Styles/ziolo.css">
+</head>
+<body>
+    <nav>
+        <h1 id="navigation-header">Zioła dookoła</h1>
+        <ul id="navigation">
+            <li id="quiz" class="nav-btn"><a href="./quiz.html">Quiz</a></li>
+            <li id="ziolopedia" class="nav-btn"><a href="./ziolopedia.html">Ziołopedia</a></li>
+            <li id="mapa" class="nav-btn"><a href="./mapaziol.html">Mapa ziół</a></li>
+            <li id="przepisy" class="nav-btn"><a href="./przepisy.html">Przepisy</a></li>
+            <li id="kalendarz" class="nav-btn"><a href="./kalendarzzbiorow.html">Kalendarz zbiorów</a></li>
+            <li id="last-item" class="nav-btn"><a href="./polecanesklepy.html">Polecane sklepy z ziołami</a></li>
+        </ul>
+    </nav>
+    <section id="ziolo">
+        <img class="ziolo-image" alt="Mięta pieprzowa">
+        <div class="ziolo-text">
+            <div class="ziolo-nazwa"></div>
+            <p class="ziolo-opis"></p>
+            <div id="galeria-zdjec"></div>
+            <div class="ziolo-wlasciwosci"></div>
+        </div>
+    </section>
+    <script type="module" src="./Scripts/firebase.js"></script>
+    <script type="module" src="./Scripts/ziolo"></script>
+</body>
+</html>

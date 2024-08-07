@@ -1,0 +1,19 @@
+{
+    "kategorieZiol": {
+        "adaptogeny": ["żeń-szeń", "ashwagandha", "rhodiola"], 
+        "antyseptyki": ["tymianek", "czosnek", "oregano"], 
+        "antyoksydanty": ["zielona herbata", "jagody", "kurkuma"], 
+        "aperienty": ["aloes", "rzewień", "senes"], 
+        "sedatywy": ["melisa", "lawenda", "waleriana"],
+        "immunostymulanty": ["echinacea", "jeżówka", "traganek"], 
+        "hepatoprotektory": ["ostropest plamisty", "karczoch", "dziurawiec"], 
+        "diuretyki": ["pokrzywa", "skrzyp", "mniszek lekarski"], 
+        "toniki": ["żeń-szeń syberyjski", "żeń-szeń panax", "eleuterokok"], 
+        "przeciwzapalne": ["kurkuma", "imbir", "boswellia"], 
+        "analgetyki": ["kora wierzby", "dziurawiec", "arnika"], 
+        "srodki_wykrztusne": ["tymianek", "lukrecja", "prawoślaz"], 
+        "srodki_trawienne": ["mięta pieprzowa", "imbir", "koper włoski"], 
+        "antydepresanty": ["dziurawiec", "szafran", "ashwagandha"],
+        "astringentne": ["kora dębu", "krwawnik", "malina"]
+    }
+}
