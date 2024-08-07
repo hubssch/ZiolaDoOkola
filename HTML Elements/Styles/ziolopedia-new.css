@@ -1,0 +1,16 @@
+.category-button:hover {
+    background-color: #45a049;
+}
+.result {
+    margin-top: 20px;
+}
+
+.category-button {
+    width: 400px;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    /* display: flex; */
+}

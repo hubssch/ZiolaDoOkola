@@ -6,6 +6,7 @@
     <title>Zioła dookoła</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./Styles/ziolo.css">
+    <link rel="stylesheet" href="./Styles/ziolopedia-new.css">
 </head>
 <body>
     <nav>
@@ -19,16 +20,19 @@
             <li id="last-item" class="nav-btn"><a href="./polecanesklepy.html">Polecane sklepy z ziołami</a></li>
         </ul>
     </nav>
-    <section id="ziolo">
-        <img class="ziolo-image" alt="Mięta pieprzowa">
-        <div class="ziolo-text">
-            <div class="ziolo-nazwa"></div>
-            <p class="ziolo-opis"></p>
-            <div id="galeria-zdjec"></div>
-            <div class="ziolo-wlasciwosci"></div>
-        </div>
-    </section>
+    <title>Zioła i ich kategorie</title>
+</head>
+<body>
+    <h1>Kategorie ziół:</h1>
+    <!-- <ul id="categoryButtons"></ul> -->
+    <div id="categoryButtons">
+        <div id="category-button"></div>
+        <div id="result" class="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
     <script type="module" src="./Scripts/firebase.js"></script>
-    <script type="module" src="./Scripts/ziolo"></script>
+    <script type="module" src="./Scripts/ziolopedia-new.js"></script>
 </body>
 </html>
