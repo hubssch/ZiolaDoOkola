@@ -1,12 +1,14 @@
 #ziolo {
     display: flex;
     margin: 25px 0 0 25px;
+    /* margin-left: 20px; */
 }
 
 .ziolo-image {
     width: 200px;
     height: 200px;
     padding-right: 10px;
+    margin-left: 40px;
 }
 
 .ziolo-text {
@@ -32,6 +34,8 @@
     line-height: 1.6;
     /* margin: 20px 0; */
     margin-top: 76px;
+    margin-right: 25%;
+    text-align: justify;
 }
 
 .ziolo-wlasciwosci h2 {

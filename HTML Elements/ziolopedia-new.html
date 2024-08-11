@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zioła dookoła</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="./Styles/ziolo.css">
     <link rel="stylesheet" href="./Styles/ziolopedia-new.css">
 </head>
 <body>
@@ -23,14 +22,17 @@
     <title>Zioła i ich kategorie</title>
 </head>
 <body>
-    <h1>Kategorie ziół:</h1>
+    <h1 id="header">Kategorie ziół:</h1>
     <!-- <ul id="categoryButtons"></ul> -->
-    <div id="categoryButtons">
-        <div id="category-button"></div>
-        <div id="result" class="result"></div>
+    <div id="category-buttons">
+        <!-- <div id="category-button"></div> -->
+         <div id="category-button">
+            <div id="result" class="result"></div>
+        </div>
+        
+        
     </div>
     
-    <script src="script.js"></script>
 </body>
     <script type="module" src="./Scripts/firebase.js"></script>
     <script type="module" src="./Scripts/ziolopedia-new.js"></script>

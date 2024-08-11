@@ -20,7 +20,7 @@ const zioła = {
 
 // Funkcja inicjalizująca przyciski z kategoriami
 function initCategoryButtons() {
-    const categoryButtonsDiv = document.getElementById('categoryButtons');
+    const categoryButtonsDiv = document.getElementById('category-buttons');
     const categories = Object.keys(zioła.kategorieZiol);
 
     categories.forEach(category => {
@@ -36,8 +36,8 @@ function initCategoryButtons() {
 
 // Funkcja wyświetlająca zioła dla wybranej kategorii
 function displayHerbsForCategory(category) {
-    // const resultDiv = document.getElementById('result');
-    const resultDiv = document.createElement('result')
+    const resultDiv = document.getElementById('result');
+    // const resultDiv = document.createElement('result')
     resultDiv.textContent = ''
     // resultDiv.innerHTML = ''; // Wyczyszczenie poprzednich wyników
     
