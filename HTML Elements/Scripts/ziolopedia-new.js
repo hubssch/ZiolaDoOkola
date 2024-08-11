@@ -23,35 +23,50 @@ function initCategoryButtons() {
     const categoryButtonsDiv = document.getElementById('category-buttons');
     const categories = Object.keys(zioła.kategorieZiol);
 
+    // Zmienna do śledzenia aktualnie otwartej kategorii
+    let currentOpenedCategory = null;
+
     categories.forEach(category => {
-        // const button = document.createElement('button');
         const button = document.createElement('li');
         button.className = 'category-button';
-        // const button = document.querySelector("#category-button")
         button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-        button.addEventListener('click', () => displayHerbsForCategory(category));
+        
+        button.addEventListener('click', () => {
+            // Wyczyszczenie poprzednio otwartej kategorii
+            if (currentOpenedCategory && currentOpenedCategory !== button) {
+                const previousList = currentOpenedCategory.querySelector('ul');
+                if (previousList) {
+                    previousList.remove();
+                }
+            }
+
+            displayHerbsForCategory(category, button);
+            currentOpenedCategory = button; // Ustawienie aktualnie otwartej kategorii
+        });
+
         categoryButtonsDiv.appendChild(button);
     });
-}
 
-// Funkcja wyświetlająca zioła dla wybranej kategorii
-function displayHerbsForCategory(category) {
-    const resultDiv = document.getElementById('result');
-    // const resultDiv = document.createElement('result')
-    resultDiv.textContent = ''
-    // resultDiv.innerHTML = ''; // Wyczyszczenie poprzednich wyników
-    
-    if (category && zioła.kategorieZiol[category]) {
-        const herbs = zioła.kategorieZiol[category];
-        const list = document.createElement('ul');
+    function displayHerbsForCategory(category, button) {
+        // Wyczyszczenie poprzedniego wyniku
+        const existingList = button.querySelector('ul');
+        if (existingList) {
+            existingList.remove();
+        }
         
-        herbs.forEach(herb => {
-            const listItem = document.createElement('li');
-            listItem.textContent = herb;
-            list.appendChild(listItem);
-        });
-        
-        resultDiv.appendChild(list);
+        // Dodanie nowej listy z ziołami
+        if (category && zioła.kategorieZiol[category]) {
+            const herbs = zioła.kategorieZiol[category];
+            const list = document.createElement('ul');
+            
+            herbs.forEach(herb => {
+                const listItem = document.createElement('li');
+                listItem.textContent = herb;
+                list.appendChild(listItem);
+            });
+            
+            button.appendChild(list);
+        }
     }
 }
 
